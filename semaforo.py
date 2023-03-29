@@ -15,11 +15,12 @@ class hilo(threading.Thread):
         semaforo.release()
 
 d=[];
-hilos = [Hilo(1),Hilo(2),Hilo(3)]
+hilos = [hilo(1),hilo(2),hilo(3)]
 for h in hilos:
     h.start()
 
 sleep(4)
 semaforo.acquire()
-print d
+print 
+d
 semaforo.release()
